@@ -12,7 +12,25 @@
   * src目录：具体每个实验源代码
   * train_log目录：具体每个实验的 worklog，相关曲线和二维花瓣图
 
-[TOC]
+ps：如果后文 latex 公式没有渲染，戳[这里](https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima/related)可以下载一个 chrome 的插件
+
+* [TL;DR](#TL;DR)
+* [softmax based loss function](#softmax-based-loss-function)
+   * [先从 softmax loss 说起](#先从-softmax-loss-说起)
+      * [softmax loss](#softmax-loss)
+      * [我对 softmax 的理解](#我对-softmax-的理解)
+         * [为什么要用 softmax](#为什么要用-softmax)
+         * [bias 的讨论](#bias-的讨论)
+         * [模长和角度的讨论](#模长和角度的讨论)
+      * [softmax的问题](#softmax的问题)
+   * [softmax loss 的相关改进工作](#softmax-loss-的相关改进工作)
+      * [normalization相关](#normalization相关)
+      * [增加 margin 相关](#增加-margin-相关)
+   * [实验验证](#实验验证)
+      * [二维feature可 视化](#二维feature可视化)
+      * [mnist实验结果](#mnist实验结果)
+      * [fashion-mnist 实验结果](#fashion-mnist-实验结果)
+   * [References](#references)
 
 # softmax based loss function
 
